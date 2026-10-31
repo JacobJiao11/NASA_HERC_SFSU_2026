@@ -1,0 +1,1 @@
+#some way for the pilot or whoever to configure the frequency as given by NASA in real time
