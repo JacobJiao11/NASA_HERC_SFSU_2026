@@ -1,4 +1,4 @@
-from picamera2 import picamera2         #import picamera2 library
+from picamera2 import Picamera2         #import picamera2 library
 import time         #import time to make sure camera has adequate time to adjust to lighting
 import random
 import PIL import Image      # library to apply filters
@@ -46,34 +46,34 @@ def greenFilter(image to apply filter)
 
 def main()
 {
-create camera object
+    create camera object
 
-#config and start camera
-camera object.configure(camera object.create_still_configuration())
-camera object.start()
+    #config and start camera
+    camera object.configure(camera object.create_still_configuration())
+    camera object.start()
 
 
-# take picture
-time.sleep(alotted time)            #let camera adjust to lighting. Usually 2
-imgPath = "og_image.jpg"
-camera object.caputre_file(imgPath) # take and save image
-camera object.stop()
+    # take picture
+    time.sleep(alotted time)            #let camera adjust to lighting. Usually 2
+    imgPath = "og_image.jpg"
+    camera object.caputre_file(imgPath) # take and save image
+    camera object.stop()
 
-# to use color filters
-if (signal red filter recieved)
-{
-    red_filter(imgPath)
-}
+    # to use color filters
+    if (signal red filter recieved)
+    {
+        red_filter(imgPath)
+    }
 
-if (signal blue filter received)
-{
-    blue_filter(imgPath)
-}
+    if (signal blue filter received)
+    {
+        blue_filter(imgPath)
+    }
 
-if (signal green filter received)
-{
-    green_filter(imgPath)
-}
+    if (signal green filter received)
+    {
+        green_filter(imgPath)
+    }
 
 }
 
