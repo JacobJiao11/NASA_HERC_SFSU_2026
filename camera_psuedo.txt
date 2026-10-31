@@ -1,0 +1,61 @@
+from picamera2 import picamera2         #import picamera2 library
+import time         #import time to make sure camera has adequate time to adjust to lighting
+import random
+import PIL import Image, ImageDraw      # library to apply filters
+
+
+# functions to apply Red, Blue, or Green filter to desired photo 
+def redFilter(image to apply filter)
+{
+    with Image.open("/file path/image name.jpg") as im:
+        im = im.convert("RGBA")
+
+    redImage = im.getchannel("R")
+
+    redImage.save("/save file path/image_red_.jpg")
+
+}
+
+
+def blueFilter(image to apply filter)
+{
+    with Image.open("/file path/image name.jpg") as im:
+        im = im.convert("RGBA")
+
+    blueImage = im.getchannel("B")
+
+    blueImage.save("/save file path/image_blue_.jpg")
+
+}
+
+
+def greenFilter(image to apply filter)
+{
+    with Image.open("/file path/image name.jpg") as im:
+        im = im.convert("RGBA")
+
+    greenImage = im.getchannel("R")
+
+    greenImage.save("/save file path/image_green_.jpg")
+
+}
+
+
+def main()
+{
+create camera object
+
+#config and start camera
+camera object.configure(camera object.create_still_configuration())
+camera object.start()
+
+
+# take picture
+time.sleep(alotted time)            #let camera adjust to lighting
+camera object.caputre_image("file_Name.jpg") # take and save image
+camera object.stop()
+}
+
+
+if __name__ == "__main__":
+    main();
