@@ -30,6 +30,8 @@ Data Organization:
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Log:
+---------------------------------------------------------------------------------
 Completed as of 10/30/2026 @ 8:30PM:
 Imported Picamera2, Pillow, and time library
 Created functions to apply filters
@@ -42,3 +44,13 @@ Have camera help LiDAR in identify objects
 Apply date and time to caputred images
 Questions:
 Do I need a function to capture image? Or is an image caputred every few seconds 
+---------------------------------------------------------------------------------
+Completed as of 10/31/2026 @ 6:00PM:
+init both camera and lidar
+Created functions to apply filter
+Have LiDAR Measure distance and return it 
+Have camera help LiDAR in identify objects
+
+Left to do: 
+Apply date and time to pictures
+Have camera help LiDAR identift objects

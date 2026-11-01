@@ -1,4 +1,6 @@
 from picamera2 import Picamera2         #import picamera2 library
+from PIL import Image, ImageDraw, ImageFont
+from datetime import datetime
 
 def init_cam():
     camera object = Picamera2()
@@ -9,6 +11,37 @@ def init_cam():
     return camera object 
 
 
-def capture_image(camera, fileName):
+def capture_image(camera, fileName):        # includes date and time the picture was taken
     camera.capture_file(fileName)
-    
+
+    im = im.open(fileName).conver("RGB")
+    draw = imDraw.Draw(im)
+
+    timestamp = datetime.now().stfrtime("%Y/%m/%d %H:%M:%S')        # year/month/date hour:minute:second
+
+
+    # install font
+        try:
+            font = ImageFont.truetype("/font file path/fontfileName", 32)
+
+        except OSError:
+            front = ImageFont.load_deafault()
+
+
+    # get size of text so we know how big to make the text box
+    txtBox = draw.textbox((0,0), timestamp, font=font)
+    txtWidth = txtBox[2] - textBox[0]
+    txtHeight = txtBox[3] - txtBox[1]
+
+    # put box in bottom left 
+    xPos = 20
+    yPos = image.height - txtHeight - 20
+
+    # fill in text box with black so text is visible
+    draw.rectangle([xPos - 10, yPos - 10, xPos + txtWidth + 10, yPos + txtHeight + 10], fill = black)
+
+    draw.text((xPos, yPos), timestamp, fill="white", font=font)     # "type" text out
+
+    im.save(fileName)
+
+
