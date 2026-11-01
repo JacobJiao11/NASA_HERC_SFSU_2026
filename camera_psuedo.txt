@@ -1,82 +1,14 @@
 from picamera2 import Picamera2         #import picamera2 library
-import time         #import time to make sure camera has adequate time to adjust to lighting
-import random
-import PIL import Image      # library to apply filters
 
-
-# functions to apply Red, Blue, or Green filter to desired photo 
-def redFilter(image to apply filter)
-{
-    with Image.open("/file path/image name.jpg") as im:
-        im = im.convert("RGB")
-
-    redImage = im.new("RGB", image.size, (255,0,0)) # tupple for red color
-    filRed_image = im.blend(im, redImage, 0.5)    # apply red to whole picture
-
-    filRed_image.save("/save file path/image_red_.jpg")
-
-}
-
-
-def blueFilter(image to apply filter)
-{
-    with Image.open("/file path/image name.jpg") as im:
-        im = im.convert("RGB")
-
-    blueImage = im.new("RGB", image.size, (0, 0, 255)) # tupple for blue color
-    filBlue_image = im.blend(im, blueImage, 0.5)    # apply blue to whole picture
-
-    filBlue_image.save("/save file path/image_blue_.jpg")
-
-}
-
-
-def greenFilter(image to apply filter)
-{
-    with Image.open("/file path/image name.jpg") as im:
-        im = im.convert("RGB")
-
-    greenImage = im.new("RGB", image.size, (0,255,0)) # tupple for green color
-    filGreen_image = im.blend(im, greenImage, 0.5)    # apply green to whole picture
-
-    filGreen_image.save("/save file path/image_green_.jpg")
-
-}
-
-
-def main()
-{
-    create camera object
-
-    #config and start camera
+def init_cam():
+    camera object = Picamera2()
     camera object.configure(camera object.create_still_configuration())
     camera object.start()
 
 
-    # take picture
-    time.sleep(alotted time)            #let camera adjust to lighting. Usually 2
-    imgPath = "og_image.jpg"
-    camera object.caputre_file(imgPath) # take and save image
-    camera object.stop()
-
-    # to use color filters
-    if (signal red filter recieved)
-    {
-        red_filter(imgPath)
-    }
-
-    if (signal blue filter received)
-    {
-        blue_filter(imgPath)
-    }
-
-    if (signal green filter received)
-    {
-        green_filter(imgPath)
-    }
-
-}
+    return camera object 
 
 
-if __name__ == "__main__":
-    main();
+def capture_image(camera, fileName):
+    camera.capture_file(fileName)
+    
