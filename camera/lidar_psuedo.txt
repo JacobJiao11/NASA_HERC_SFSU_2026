@@ -1,0 +1,30 @@
+# libraries needed 
+import Serial
+from statistics import median       # will help get rid of noise
+from config import PORT, BAUD_RATE
+
+def init_lidar():
+{
+    return serial.Serial(port = PORT, baudRate = BAUD_RATE, timeout = 1)
+}
+
+def rd_lidar_pckt(lidar):           # packet contains all instances of detection. information formatted as (angle, distance, intensity).
+    #read and validate packet
+    pass
+
+def decodePckt(packet_bytes):       # packet bytes from rd_lidar_packets
+{
+    #convert bytes into angles and distance points
+    pass
+}
+
+def rd_full_scan(lidar):
+    # collect measurements until full 360 degrees is read 
+    pass
+
+def angle_is_in_sctr(angle, startAngle, endAngle):
+    pass
+
+def find_obj_dist(scan, startAngle, endAngle):
+    # find distance of object in a selected direction 
+    pass 

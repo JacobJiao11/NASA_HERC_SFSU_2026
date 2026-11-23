@@ -1,0 +1,21 @@
+from lidar_psuedo import init_lidar, rd_full scan, find_obj_dist
+from camera_psuedo import capture_image
+from colorFil_psuedo import redFilter, blueFilter, greenFilter
+
+
+def main()
+{
+   lidar = init_lidar()
+
+   while True:
+        scan = rd_full_scan(lidar)
+
+        front_dist = find_obj_dist(scan, 315, 45)       # scan for object in front of Rover
+
+        print(distance of object using front_dist)
+
+}
+
+
+if __name__ == "__main__":
+    main();

@@ -1,0 +1,8 @@
+PORT = "port location"       # put corresponding port
+BAUD_RATE = 230400
+
+MIDIST_MM = 30
+MAXDIST_MM = 12000
+
+FRNT_START_ANGLE = 315
+FRNT_END_ANGLE = 45
